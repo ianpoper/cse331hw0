@@ -27,26 +27,17 @@ Solution::Solution(vector<int> in_vector) :
 {}
 
 
-vector<int> Solution::outputVector() {
-    /*
-     * Implement the solution in this function
-     * Return the variable "m_outputVector" after you fill it with stable
-     * matches.
-     */
-    int curVal = 0;
-    int n = m_inputVector.size();
-    for (int i = 0; i < n; i++) {
-      m_outputVector.push_back(0);
-        for (int j = 0; j < n; j++) {
-            if (j < i) {
-                curVal = 0;
-            }
-            else {
-                curVal = 1;
-            }
-            m_outputVector[i] += m_inputVector[j] * curVal;
-
-        }
-    }
-    return m_outputVector;
+vector<int> Solution::outputVector()
+{
+    int n = m_inputVector[0];
+    int i = n;
+    int sum = 0;
+    for(int j = n; j>0; j--)
+      {
+	sum += m_inputVector[j];
+	m_outputVector.insert(m_outputVector.begin(), sum);
+      }
+    //cout<<sum;
+    
+  return m_outputVector;
 }
