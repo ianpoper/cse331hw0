@@ -29,7 +29,7 @@ Solution::Solution(vector<int> in_vector) :
 
 vector<int> Solution::outputVector()
 {
-    int n = m_inputVector[0];
+  int n = m_inputVector.size()-1;
     int i = n;
     int sum = 0;
     for(int j = n; j>0; j--)
