@@ -36,6 +36,7 @@ vector<int> Solution::outputVector() {
     int curVal = 0;
     int n = m_inputVector.size();
     for (int i = 0; i < n; i++) {
+      m_outputVector.push_back(0);
         for (int j = 0; j < n; j++) {
             if (j < i) {
                 curVal = 0;
